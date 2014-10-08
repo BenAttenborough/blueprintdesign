@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0 ,user-scalable=no">
+    
+    <title>Title</title>
+    
+    <link rel="stylesheet" href="css/altStylesSmall.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    
+    <script src="//use.edgefonts.net/droid-sans.js"></script> 
+    
+</head>
+
+<body>
+<div id="mainContainer">
+    <div id="productBox"></div>
+    <div id="infoContainer">
+        <div id="productInfo">
+        <h4 style="text-align: centre">Click on a box to play!</h4>
+        </div>
+    </div>
+    <img id="GPinfo" class="slice" src="img/boardslices/tiny/slice_01.jpg">
+    <img id="Bridge" class="slice" src="img/boardslices/tiny/slice_02.jpg">
+    <img id="About" class="slice" src="img/boardslices/tiny/slice_03.jpg">
+    <img id="Casino" class="slice" src="img/boardslices/tiny/slice_04.jpg">
+    <img id="Chess" class="slice" src="img/boardslices/tiny/slice_05.jpg">
+    <img class="slice" src="img/boardslices/tiny/slice_06.jpg">
+    <img id="Children" class="slice" src="img/boardslices/tiny/slice_07.jpg">
+    <img id="Family" class="slice" src="img/boardslices/tiny/slice_08.jpg">
+    <img class="slice" src="img/boardslices/tiny/slice_09.jpg">
+    <img id="Oriental" class="slice" src="img/boardslices/tiny/slice_10.jpg">
+    <img class="slice" src="img/boardslices/tiny/slice_11.jpg">
+    <img class="sliceVert" src="img/boardslices/tiny/slice_12.jpg">
+    <img class="sliceCentral" src="img/boardslices/tiny/slice_13.jpg">
+    <img id="Garden" class="sliceVert" src="img/boardslices/tiny/slice_14.jpg">
+    <img class="sliceVert"  src="img/boardslices/tiny/slice_15.jpg">
+    <img class="sliceCentral" src="img/boardslices/tiny/slice_16.jpg">
+    <img id="Pub" class="sliceVert" src="img/boardslices/tiny/slice_17.jpg">
+    <img class="sliceVert" src="img/boardslices/tiny/slice_18.jpg">
+    <img class="sliceCentral" src="img/boardslices/tiny/slice_19.jpg">
+    <img id="GamesCom" class="sliceVert" src="img/boardslices/tiny/slice_20.jpg">
+    <img class="sliceVert" src="img/boardslices/tiny/slice_21.jpg">
+    <img class="sliceCentral" src="img/boardslices/tiny/slice_22.jpg">
+    <img class="sliceVert" src="img/boardslices/tiny/slice_23.jpg">
+    <img class="sliceVert" src="img/boardslices/tiny/slice_24.jpg">
+    <img class="sliceCentral" src="img/boardslices/tiny/slice_25.jpg">
+    <img id="Travel" class="sliceVert" src="img/boardslices/tiny/slice_26.jpg">
+    <img class="sliceVert" src="img/boardslices/tiny/slice_27.jpg">
+    <img class="sliceCentral" src="img/boardslices/tiny/slice_28.jpg">
+    <img class="sliceVert" src="img/boardslices/tiny/slice_29.jpg">
+    <img class="sliceVert" src="img/boardslices/tiny/slice_30.jpg">
+    <img class="sliceCentral" src="img/boardslices/tiny/slice_31.jpg">
+    <img class="sliceVert" src="img/boardslices/tiny/slice_32.jpg">
+    <img class="sliceVert" src="img/boardslices/tiny/slice_33.jpg">
+    <img class="sliceCentral" src="img/boardslices/tiny/slice_34.jpg">
+    <img class="sliceVert" src="img/boardslices/tiny/slice_35.jpg">
+    <img class="sliceVert" src="img/boardslices/tiny/slice_36.jpg">
+    <img class="sliceCentral" src="img/boardslices/tiny/slice_37.jpg">
+    <img class="sliceVert" src="img/boardslices/tiny/slice_38.jpg">
+    <img class="slice" src="img/boardslices/tiny/slice_39.jpg">
+    <img class="slice" src="img/boardslices/tiny/slice_41.jpg">
+    <img class="slice" src="img/boardslices/tiny/slice_42.jpg">
+    <img class="slice" src="img/boardslices/tiny/slice_43.jpg">
+    <img class="slice" src="img/boardslices/tiny/slice_44.jpg">
+    <img class="slice" src="img/boardslices/tiny/slice_45.jpg">
+    <img class="slice" src="img/boardslices/tiny/slice_46.jpg">
+    <img class="slice" src="img/boardslices/tiny/slice_47.jpg">
+    <img class="slice" src="img/boardslices/tiny/slice_48.jpg">
+    <img class="slice" src="img/boardslices/tiny/slice_49.jpg">
+        <img class="slice" src="img/boardslices/tiny/slice_40.jpg">
+</div>
+</body>
+
+<script>
+    
+$(document).ready(function(){
+var mainContainerHeight = $( "#mainContainer" ).width();
+$( "#mainContainer" ).height(mainContainerHeight);
+
+$( window ).resize(function() {
+    mainContainerHeight = $( "#mainContainer" ).width();
+    $( "#mainContainer" ).height(mainContainerHeight);
+});
+    
+//    calculate window width
+//    make window height = window width
+    
+//Function to hande smooth scrolling between links
+$(function() {
+  $('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
+    
+    var handlerIn = function(){
+        $( this ).css({ "opacity": "1" });
+    }
+    
+    var handlerOut = function(){
+        $( this ).css({"opacity": "0.5" });
+    }
+        
+    $( ".slice" ).mouseenter( handlerIn ).mouseleave( handlerOut );
+    $( ".sliceVert" ).mouseenter( handlerIn ).mouseleave( handlerOut );
+    
+// We'll create it as a 'class' this time
+var SlideShow = function () {};
+
+// This is giving methods to the class (i.e. when you instantiate the 'class'
+// with new SlideShow() the instance will have all these methods.
+SlideShow.prototype.nextImage = function () {
+        // Stash a reference to 'this' - we'll need this later
+        var self = this;
+    
+        // Increment the image counter (modulus to wrap back to zero)
+        this.currentImage = (this.currentImage + 1) % this.imageElements.length;
+
+        // We use this a few times, so grab a reference to it.
+        var currentElement = $(this.imageElements[this.currentImage]);
+    
+        // Make sure the next image is already hidden
+        currentElement.hide();
+
+        // Move the current image to the end of the #slideshow element
+        // so it sits on top of them all z-index wise
+        $('#productBox').append(currentElement);
+
+        // And fade in the next image for 2 seconds
+        currentElement.fadeIn({
+            duration: 2000
+        });
+
+        // Then set a 5 second timeout to call this function again to display the next image
+        this.timeout = window.setTimeout(function() {
+            self.nextImage();
+        }, 5000);
+    };
+
+SlideShow.prototype.reset = function() {
+    // Stop the timer (if there is one)
+    if(this.timeout) {
+        clearTimeout(this.timeout);
+    }
+    
+    this.imageElements = $('#productBox img')
+    
+    // Set the current image to the first one
+    this.currentImage = 0;
+
+    // Hide all the images
+    this.imageElements.hide();
+    
+    // And start the crossfader
+    this.nextImage();
+}
+
+// This instantiates the SlideShow object
+var productShow = new SlideShow();
+    
+    $ ( "#GPinfo" ).click(function() {
+    
+    $ ( "#productInfo" ).html('<h4>Geoffrey Parker Games makers of the worlds finest games and gifts</h4>'+
+'<p>As a traditional and british company; we continue to hand manufacture our superb games in our country workshops. maintaining the exemplary standards of the master craftsman, we are able to offer our customers a unique and personalised service. years of designing and creating custom products for the world’s luxury stores, casinos, corporations and private commissions has given us a unique insight into the constantly changing world of design.</p>' +
+'<p>This website cannot possible reveal the full extent of our talents, but we hope it will give you an idea of what we can create for you both in gaming and bespoke gifts. our design team is always on hand to discuss specific requirements. visits to our workshops are always welcome by appointment.</p>'+ 
+'<p>please note, we are currently undergoing major website improvements in our bespoke and exceptional pieces sections of the site, therefore some product information might not be available at the moment. please accept our apologies for any inconvenience this may cause.</p>');
+    
+    //Load images
+    $ ( "#productBox" ).html('<img class="product" src="img/products/BookBridge01.jpg" />'+
+'<img class="product" src="img/products/BookBridge02.jpg" />');
+   
+    //start slideshow    
+    productShow.reset();
+});
+    
+//Assign a function when button is clicked on
+$ ( "#Bridge" ).click(function() {
+    
+    $ ( "#productInfo" ).html('<h4>Book Box Bridge</h4>'+
+'<p>A leather-bound faux book with suede or leather “pages” makes for a beautiful presentation of a 2 deck Bridge set, complete with 4 slim Bridge pencils and 50 specially printed double-sided score cards. The “book” can also have a contrast spine title panel if so desired?. Available in all of our Dauphin calf leathers to order. Many customers like to line the insides in a contrasting leather colour or suede – please discuss this with our Bespoke department when ordering.</p>');
+    
+    //Load images
+    $ ( "#productBox" ).html('<img class="product" src="img/products/BookBridge01.jpg" />'+
+'<img class="product" src="img/products/BookBridge02.jpg" />');
+   
+    //start slideshow    
+    productShow.reset();
+});
+    
+    $ ( "#About" ).click(function() {
+    
+    $ ( "#productInfo" ).html('<h4>Geoffrey Parker Games makers of the worlds finest games and gifts</h4>'+
+'<p>As a traditional and british company; we continue to hand manufacture our superb games in our country workshops. maintaining the exemplary standards of the master craftsman, we are able to offer our customers a unique and personalised service. years of designing and creating custom products for the world’s luxury stores, casinos, corporations and private commissions has given us a unique insight into the constantly changing world of design.</p>' +
+'<p>This website cannot possible reveal the full extent of our talents, but we hope it will give you an idea of what we can create for you both in gaming and bespoke gifts. our design team is always on hand to discuss specific requirements. visits to our workshops are always welcome by appointment.</p>'+ 
+'<p>please note, we are currently undergoing major website improvements in our bespoke and exceptional pieces sections of the site, therefore some product information might not be available at the moment. please accept our apologies for any inconvenience this may cause.</p>');
+    
+    //Load images
+    $ ( "#productBox" ).html('<img class="product" src="img/products/BookBridge01.jpg" />'+
+'<img class="product" src="img/products/BookBridge02.jpg" />');
+   
+    //start slideshow    
+    productShow.reset();
+});
+
+//Assign function to second button
+$ ( "#Casino" ).click(function() {
+    
+    $ ( "#productInfo" ).html('<h4>Casino Games</h4>'+
+'<p>Now that casino gaming has become more mainstream and is becoming more commonplace within the home, the demand for our home games has never been greater. So often one has to compromise when trying to bring the glamour of the casino into the home, with cheap, low quality, unattractive accessories one would not normally accept. However, we at Geoffrey Parker endeavour to make this transition more comparable – having made the "soft gaming" and VIP requirements for the World’s most prestigious casino and gaming clubs for over 40 years, we have picked up a thing or two along the way!</p>');
+    
+    //Load images
+    $ ( "#productBox" ).html('<img class="product" src="img/products/PokerChips.jpg" />'+
+'<img class="product" src="img/products/PokerChips2.jpg" />'+
+'<img class="product" src="img/products/chips.jpg" />'
+                            );
+   
+    //start slideshow    
+    productShow.reset();
+});
+
+    $ ( "#Chess" ).click(function() {
+    
+    $ ( "#productInfo" ).html('<h4>Chess</h4>'+
+'<p>Following our tradition of almost 50 years of making the World’s finest Chess sets, culminating in the supply of chess boxes and boards for the famous 1972 World Chess Championship clash between Spassky and Fischer in Iceland, we have now developed an “edited luxury” chess set based around our “Club” Staunton design chessmen (originally designed in 1849). These boxwood weighted chessmen are housed in a felt lined hand-bound Mountain Hide tray with a printed leather chessboard as the lid. Available in two designs, Contemporary or Antiqued.</p>');
+    
+    //Load images
+    $ ( "#productBox" ).html('<img class="product" src="img/products/OffSelf/Chess01.jpg" />'+
+'<img class="product" src="img/products/OffSelf/Chess02.jpg" />'+
+'<img class="product" src="img/products/OffSelf/Chess03.jpg" />');
+   
+    //start slideshow    
+    productShow.reset();
+});
+    
+    $ ( "#Children" ).click(function() {
+    
+    $ ( "#productInfo" ).html('<h4>Game Cube - luxury children\'s edition</h4>'+
+'<p>An award winning design (won the British Design Association award for "outstanding design" at Decorex 2008) incorporating a stunning 23 games into one cube!</p>'+
+'<p>Hand inlaid throughout, the 6 gaming boards on the outside can be made in any of our Dauphin calf leathers and is trimmed in Stainless Steel for a "contemporary" feel.</p>'+
+'<p>The Backgammon slides open to reveal a further 17 games inside, housed in a series of felt drawstring bags, labelled with its contents. A great favourite aboard private yachts where space is often at a premium but where one requires safe stowage of ones games and an item to reflect the quality of the yacht.</p>');
+    
+    //Load images
+    $ ( "#productBox" ).html('<img class="product" src="img/products/Bespoke/Children01.jpg" />'+
+'<img class="product" src="img/products/Bespoke/Children02.jpg" />'+
+        '<img class="product" src="img/products/Bespoke/Children03.jpg" />');
+   
+    //start slideshow    
+    productShow.reset();
+});
+    
+        $ ( "#Family" ).click(function() {
+    
+    $ ( "#productInfo" ).html('<h4>Family Board Games - an introduction</h4>'+
+'<p>It was in the early Eighties when we first sough a license to produce a luxury version of a classic family board game, following repeated requested to do what we had done for Chess and Backgammon to such acclaim.</p>');
+    
+    //Load images
+    $ ( "#productBox" ).html('<img class="product" src="img/products/Bespoke/Scrabble01.jpg" />'+
+'<img class="product" src="img/products/Bespoke/Scrabble02.jpg" />'+
+                            '<img class="product" src="img/products/Bespoke/Scrabble03.jpg" />');
+   
+    //start slideshow    
+    productShow.reset();
+});
+    
+    
+        $ ( "#Oriental" ).click(function() {
+    
+    $ ( "#productInfo" ).html('<h4>MAH JONG</h4>'+
+'<p>The tradition and spirit of the East is evoked by our luxury take on this most famous of Oriental games.</p>'+
+'<p>After searching whilst in Hong Kong many years ago when we used to make luxury suite accessories and VIP gifts for the World\'s top hotels and clubs, many of which were situated in the East - we found traditional hand-pained bone Mah Jong tiles backed with Bamboo. Leaving behind the clatter of Mah Jong schools, we headed home and set to work creating a luxury version of this facsinating game.</p>'+
+'<p>With authentic playing pieces as our base, we have made a leather-bound attache case with a "fishtail" carrying handle and lined in sumpteous suede.</p>'+
+'<p>Each little leather tray inside carries a different set of tiles, while the "Moons" and other accessories are stowed within a central compartment.</p>');
+    
+    //Load images
+    $ ( "#productBox" ).html('<img class="product" src="img/products/Bespoke/Mahjong01.JPG" />'+
+'<img class="product" src="img/products/Bespoke/Mahjong01.JPG />');
+   
+    //start slideshow    
+    productShow.reset();
+});
+    
+        $ ( "#Garden" ).click(function() {
+    
+    $ ( "#productInfo" ).html('<h4>Garden Games - an introduction</h4>'+
+'<p>Evoking memories of English summer afternoons, our “picnic” Croquet “hamper” offers hours of fun for four players, young or old.</p>'+
+'<p>Complete with everything one needs for an afternoon\'s gaming, from corner flags, turned wooden brass banded mallets, pegs, clips, balls, rules etc all stowed safely away in a hand woven English wicker basket with traditional Bridle Hide straps.</p>'+
+'<p>For the ultimate in decadence, please refer to our Exceptional Pieces section where details on our Super Enriched croquet set are given.</p>');
+    
+    //Load images
+    $ ( "#productBox" ).html('<img class="product" src="img/products/Bespoke/Croq01.jpg" />'+
+'<img class="product" src="img/products/Bespoke/Croq02.jpg" />'+
+'<img class="product" src="img/products/Bespoke/Croq03.jpg" />'+
+'<img class="product" src="img/products/Bespoke/Croq04.jpg" />');
+   
+    //start slideshow    
+    productShow.reset();
+});
+    
+        $ ( "#Pub" ).click(function() {
+    
+    $ ( "#productInfo" ).html('<h4>Giant Carpet Dominoes</h4>'+
+'<p>The second edition offers all twenty-six Dominoes bound by hand in Dauphin calf in giant format for "carpet" playing. Double-six conifiguration, these handsome "doms" are housed in a sumptuous suede lined and padded huge “Domino” case, with polished nickel lift catches.</p>'+
+'<p>Available in any of our Dauphin calf leathers with contrasting “spots” and lining suede. Corporate logos or personal initials can be embossed if so desired.</p>');
+    
+    //Load images
+    $ ( "#productBox" ).html('<img class="product" src="img/products/Bespoke/Doms01.jpg" />'+
+'<img class="product" src="img/products/Bespoke/Doms02.jpg" />'+
+                            '<img class="product" src="img/products/Bespoke/Doms03.jpg" />'+
+                            '<img class="product" src="img/products/Bespoke/Doms04.jpg" />'+
+                            '<img class="product" src="img/products/Bespoke/Doms05.jpg" />'+'<img class="product" src="img/products/Bespoke/Doms06.jpg" />');
+   
+    //start slideshow    
+    productShow.reset();
+});
+    
+        $ ( "#GamesCom" ).click(function() {
+    
+    $ ( "#productInfo" ).html('<h4>Game Compendia - introduction:</h4>'+
+'<p>A very popular request for us is to twin or compile multiples of our games – however unlike many gaming suppliers, we do not compromise on the quality of the items within our compendia – why should they be of a less specification or quality? So you will find many items that may appear through the pages of our web-site in their own right that have been included within a compendium. Our current range is very extensive as is as follows:</p>');
+    
+    //Load images
+    $ ( "#productBox" ).html('<img class="product" src="img/products/Bespoke/GamesCom01.JPG" />'+
+'<img class="product" src="img/products/Bespoke/GamesCom02.JPG" />'+
+                            '<img class="product" src="img/products/Bespoke/GamesCom03.JPG" />'+
+                            '<img class="product" src="img/products/Bespoke/GamesCom04.JPG" />'+'<img class="product" src="img/products/Bespoke/GamesCom05.JPG" />'+'<img class="product" src="img/products/Bespoke/GamesCom06.JPG" />');
+   
+    //start slideshow    
+    productShow.reset();
+});
+    
+        $ ( "#Travel" ).click(function() {
+    
+    $ ( "#productInfo" ).html('<h4>Travel Games</h4>'+
+'<p>Just because one is travelling, one should not have to compromise on quality.this has always been our premise when designing and making travel games.</p>'+
+'<p>From the days when the venerable Venice Simplon Orient Express back in the Seventies requested that we produce a range of games to reflect their customers’ standing, taste and demands, we simply looked to our full size games and “down-sized” them, to use a modern day term.</p>'+
+'<p>This of course is not always the most cost effective way of presenting items to the market, where there is much competition and many who are not normally in the “gaming” business, think that this is just another piece of giftware. This is not the case, the games must work or they are useless. So once the quality materials have been selected and sourced our design team look to the failing of other sets on the market, whether it be large intrusive locks or catches, which would get caught on ones expensive clothing when travelling, or ridiculously small playing pieces which are difficult to pick up – one’s hands do not get smaller when we travel! Also when we are making a board that can offer more games than just one for very little extra cost, weight or size; then it should be added to enhance the product and our customer’s perception of quality and value.</p>'+
+'<p>Within this range which is currently being re-worked to include printed leather playing boards which will reduce costs and offer a larger possible range of options for customisation and different design aspects, we offer the classic games Chess, Backgammon, Draughts (or Checkers) plus a small travel compendium within our Compact Travel Backgammon (# 83GC) and even a full size travel set for the serious Chess and Backgammon player (# 87/ S & F / CS), which both retain fully hand inlaid playing fields.</p>'+
+'<p>Soon to be added to this collection will be two Backgammon Roll-ups paying special attention to the players needs so often missed by other such sets.please watch this space.</p>');
+    
+    //Load images
+    $ ( "#productBox" ).html('<img class="product" src="img/products/Bespoke/Travel01.JPG" />'+
+'<img class="product" src="img/products/Bespoke/Travel02.JPG" />'+
+                            '<img class="product" src="img/products/Bespoke/Travel03.JPG" />'+
+                            '<img class="product" src="img/products/Bespoke/Travel04.JPG" />'+
+                            '<img class="product" src="img/products/Bespoke/Travel05.JPG" />'+
+                            '<img class="product" src="img/products/Bespoke/Travel06.JPG" />'+
+                            '<img class="product" src="img/products/Bespoke/Travel07.JPG" />'+
+                            '<img class="product" src="img/products/Bespoke/Travel08.JPG" />'+
+                            '<img class="product" src="img/products/Bespoke/Travel09.JPG" />'+
+                            '<img class="product" src="img/products/Bespoke/Travel10.JPG" />');
+   
+    //start slideshow    
+    productShow.reset();
+});
+    
+});
+</script>
+</html>

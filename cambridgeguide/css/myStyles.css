@@ -1,0 +1,88 @@
+/*
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -142px; 
+}
+*/
+
+
+
+#home{
+    width: 100%;
+    height: 100%;
+    background-color: white; 
+}
+
+#selectionPane{
+    width: 100%;
+    height: 100%;
+    background-color: white; 
+}
+
+#data{
+    width: 100%;
+    height: 40%;
+    background-color: white;   
+}
+
+#mapContainer{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+}
+
+#map-canvas{
+    height: 100%;
+}
+
+#infoContainer{
+    width: 90%;
+    height: 100%;
+    margin-left: 5%;
+    padding-right: 5%;
+}
+
+#buildingName{
+    text-align: center;
+}
+
+#poiContainer{
+    height: 70%;
+    background-color: blue;
+}
+
+/*
+#footer{
+        position: absolute;
+
+    z-index: 99;
+}
+
+#footer, .push{
+    height: 142px;
+}
+*/
+
+/*
+#home{
+    background-color: gray;
+}
+*/
+
+
+
+.buttonStyle{
+    width: 80%;
+    margin: auto;
+/*    align-content: center;*/
+}
+
+.hidden{
+    display: none;
+}
+
+.visible{
+    display: block;
+}

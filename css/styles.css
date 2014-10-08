@@ -1,0 +1,281 @@
+html{
+    background-color: #101010;    
+}
+
+body { 
+    margin: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+    max-width: 1000px;
+
+}
+
+#mainContainer {
+    height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    background-color: #8bb4e0;
+    padding: 0 2%;
+}
+
+#menu {
+    background-color: #8bb4e0;
+    width:100%;
+    height: 100%;
+}
+
+#logoSmall {
+    width: 95%;
+    margin:0 2%;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+#logoLarge {
+    width: 95%;
+    max-width: 750px;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right:auto;
+    display: none;
+}
+
+#smallscreenTitle {
+    width: 100%;
+    text-align: center;
+}
+
+#widescreenTitle {
+    display: none;
+    float: left;
+    width: 100%;
+    margin-bottom: 3%;
+    margin-top: 2%;
+    text-align: center;
+}
+
+#kingsContainer {
+}
+
+#kingsContainerWide {
+    display: none;
+}
+
+figure { 
+    background-color: black;
+    display: block;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    margin-left: 0em;
+    margin-right: 0em;
+}
+
+figcaption { 
+    display: block;
+    height:3em;
+    text-align: center;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    margin-left: 0em;
+    margin-right: 0em;
+    overflow: hidden;
+}
+
+
+/*
+.twoColBox{
+    width: 50%;
+    height: 0;
+    padding-bottom: 50%;
+    background-color: black;
+}
+*/
+
+
+
+p{
+    color: white;
+    font-family: "museo-sans", Verdana, Geneva, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 1.2em;
+    margin-top: 0;
+    margin-bottom: 8pt;
+}
+
+h1{
+    color: white;
+    font-family: "museo-sans", Verdana, Geneva, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.5em;
+    line-height: 1.2em;
+    margin-top: 0em;
+    margin-bottom: 0px;
+}
+
+h2{
+    color: white;
+    font-family: "museo-sans", Verdana, Geneva, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1.2em;
+}
+
+h3{
+    color: white;
+    font-family: "museo-sans", Verdana, Geneva, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1em;
+    margin: 0px;
+    padding: 2%;
+}
+
+h4{
+    color: white;
+    font-family: "museo-sans", Verdana, Geneva, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18pt;
+}
+
+a:link {
+    text-decoration: none;
+    color: white;
+    font-family: "museo-sans", Verdana, Geneva, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 1em;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+.flexibox1{
+    width: 100%;
+    margin-bottom: 2%;
+}    
+
+.flexibox2{
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+.flexibox4{
+    width: 100%;
+    margin-bottom: 2%;
+    float: left;
+}
+
+.fadeImg{
+    opacity: 0.75;
+}
+
+.projectTitle{
+    height: 100%;
+    width: 100%; 
+    float: left;
+    margin-bottom: 2%;
+    background-color: #3d7ad4;
+}
+
+.projectTitleText{
+    text-align: center; 
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.projectImage{
+}
+
+.iconsBox{
+    height:100%; 
+    position: relative;
+    overflow:auto;
+}
+
+/*Changes for displays above 480px*/
+@media screen and (min-width: 480px){
+
+    /*Hide the small screen logo and diplay the larger screen logo*/
+    #logoSmall {
+        display: none;
+    }
+    #logoLarge {
+        display: block;
+    }
+    
+/*    Adjust the size of the heading text for bigger screens */
+    
+    h1{
+        font-size: 1.5em;
+        line-height: 1.2em;
+    }
+    
+/*    Actually reduce size of h3 so it fits in the 2 column layout boxes*/
+    h3{
+        font-size: 1em;
+    }
+    
+/*    Sets style for boxes which resize for bigger screens*/
+    .flexibox2{
+        width: 49%;
+        height: 100%;
+        margin-bottom: 2%;
+        background-color: #8bb4e0;
+    }    
+    
+    .flexibox4{
+        overflow: hidden;
+        width: 23.5%;
+        height: 20%;
+        margin-bottom: 2%;
+        background-color: #8bb4e0;
+        float: left;
+        margin-right: 2%;
+    }
+}
+
+/*Changes for displays above 600px*/
+@media screen and (min-width: 600px){
+    h3{
+        font-size: 1.2em;
+    }
+}
+
+/*Changes for displays above 800px*/
+@media screen and (min-width: 800px){
+    h3{
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    #smallscreenTitle {
+        display: none;
+    }
+
+    #widescreenTitle {
+        display: inline;
+    }
+    
+    #kingsContainer {
+        display: none;
+    }
+
+    #kingsContainerWide {
+        display: inline;
+        padding-top: 50px;
+    }
+}

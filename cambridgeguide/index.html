@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1.0 ,user-scalable=no">
+        <link rel="stylesheet" href="css/animate.min.css" />
+        <link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.2.min.css" />
+<!--        <link rel="stylesheet" href="css/style.css"/>-->
+        
+        <script src="js/infotext.js"></script>
+        
+        <script src="js/jquery.js"></script>
+        <script src="js/jquery.mobile-1.4.2.min.js"></script>
+<!--        <script src="js/jquery.mobile-1.4.2.js"></script>-->
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+<!--         <script src="js/jquery.slides.min.js"></script>-->
+        <script src="js/jquery.slides.js"></script>
+        <script src="js/Script.js"></script>
+        <link rel="stylesheet" href="css/myStyles.css"/>
+
+
+
+ 
+    </head>
+<body>
+            <title>Cambridge Guide</title>
+
+    
+    
+    <div data-role="page" id="home" style="overflow:hidden">
+
+<!--        <div id="poiContainer" data-role="content">-->
+        <div id="selectDiv">
+        <p></p>
+            <center>Select a point of interest</center>
+            <p></p>
+        </div>
+            <div id="selectionPane" style="overflow:auto">
+                <a href="#data" onclick="selectClick(12)" class="ui-btn buttonStyle" data-transition="slide"><p>Overview</p></a>
+                <a href="#data" onclick="selectClick(0)" class="ui-btn buttonStyle" data-transition="slide"><p>Kings College</p></a>
+                <a href="#data" onclick="selectClick(1)" class="ui-btn buttonStyle" data-transition="slide"><p>The Round Church</p></a>
+                <a href="#data" onclick="selectClick(2)" class="ui-btn buttonStyle" data-transition="slide"><p>Cambridge Market</p></a>
+                <a href="#data" onclick="selectClick(3)" class="ui-btn buttonStyle" data-transition="slide"><p>Trinity College</p></a>
+                <a href="#data" onclick="selectClick(4)" class="ui-btn buttonStyle" data-transition="slide"><p>St John's</p></a>
+                <a href="#data" onclick="selectClick(5)" class="ui-btn buttonStyle" data-transition="slide"><p>Queen's College</p></a>
+                <a href="#data" onclick="selectClick(6)" class="ui-btn buttonStyle" data-transition="slide"><p>Fitzwilliam Museum</p></a>
+                <a href="#data" onclick="selectClick(7)" class="ui-btn buttonStyle" data-transition="slide"><p>Cambridge Folk Museum</p></a>
+                <a href="#data" onclick="selectClick(8)" class="ui-btn buttonStyle" data-transition="slide"><p>Botanic Gardens</p></a>
+                <a href="#data" onclick="selectClick(9)" class="ui-btn buttonStyle" data-transition="slide"><p>Kettles Yard</p></a>
+                <a href="#data" onclick="selectClick(10)" class="ui-btn buttonStyle" data-transition="slide"><p>The Museum of Technology</p></a>
+                <a href="#data" onclick="selectClick(11)" class="ui-btn buttonStyle" data-transition="slide"><p>Museum of Archaeology</p></a>
+<BR>&nbsp;<BR>
+<BR>&nbsp;<BR>
+            </div>
+<!--        </div>-->
+<!--
+                <div data-role="footer" data-position="fixed" class="hidden">
+           </div>
+-->
+    </div>
+
+    <div data-role="page" id="data">
+        <div id="dataHeader" data-role="header" data-position="fixed">
+            <div data-role="navbar" data-fullscreen="true">
+                <ul>
+                    <li><a href="#" onclick="dataClick('map')" data-icon="location" class="ui-btn-active">Map</a></li>
+                    <li><a href="#" onclick="dataClick('info')" data-icon="info" >Info</a></li>
+                    <li><a href="#" onclick="dataClick('eye')" data-icon="eye">Pics</a></li>
+                    <li><a href="#" onclick="dataClick('hide')" data-icon="camera" class="hidden">Full screen</a> </li>
+                </ul>
+                <p id="buildingName" class="ui-btn-mini"></p>
+            </div><!-- /navbar -->
+        </div>
+        <div id="mapContainer">
+            <div id="map-canvas"></div>
+                    <div id="infoContainer" style="overflow:auto" class="hidden">
+                        <p>Please select a point of interest from the main menu</p>
+                    </div>
+<!--
+                    <div id="picContainer" class="hidden">
+                        <p>Pic container</p>
+                    </div>
+-->
+        </div>
+        <div id="footer" data-role="footer" data-position="fixed">
+            <div data-role="navbar" data-fullscreen="true">
+                <ul>
+                    <li><a href="#home" id="poiFooter" onclick="returnHome()" data-icon="action" data-transition="slide" data-direction="reverse">Select new point of interest</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

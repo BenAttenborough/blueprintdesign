@@ -1,0 +1,122 @@
+      #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+        
+    #screenContainer{
+/*
+        width: 785px;
+        height: 490px;
+*/
+        width: 100%;
+        height: 100%;
+/*
+        border:1px solid #000000;
+        border-color: black;
+*/
+        background-color: white;
+        margin: 0px;
+    }
+        
+    #mapNavbar{
+        position: absolute; 
+/*        border:1px solid #000000;*/
+/*        border-color: black;*/
+        margin-left: 2%;
+        width: 100%;
+        height: 100%;
+        top: 20px; 
+        left: 20px; 
+        z-index: 99;
+
+        /*
+        float: top;
+        width:500px;
+        height:50px;
+        border:1px solid #000000;
+        border-color: black;
+        background-color: red;
+        margin-left: 20px;
+        margin-top:20px;
+*/
+    }
+        
+    #mapContainer{
+        float: left;
+        width: 100%;
+        height: 100%;
+/*
+        border:1px solid #000000;
+        border-color: black;
+*/
+        background-color: gray;
+        margin-left: 20px;
+        margin-top: 20px;
+        margin-right: 15px;    
+    }
+
+    .photoStyle{
+        float: left;
+        width: 60%;
+        height: 80%;
+        border:1px solid #000000;
+        border-color: black;
+        background-color: transparent;
+        margin-left: 0%;
+        margin-top: 0%;
+        margin-right: 15px;
+    }
+        
+    #selectionPane{
+        width: 30%;
+        position: absolute; 
+        top: 70px; 
+        right: 20px; 
+        z-index: 99;
+        overflow: auto;
+    }
+
+#splashContainer{
+position: relative;
+}
+
+#beginBtn{
+    width: 100px;
+    position: absolute; 
+/*    align-content: center;*/
+    bottom: 20%; 
+    right: 50%;
+    z-index: 99;
+/*
+      margin-left: auto ;
+  margin-right: auto ;
+*/
+}
+    
+           .buttonStyle{
+                margin: 0px;
+            }
+    
+        .hidden{
+        display: none;
+        background: #670a0a;
+    }
+
+    .visible{
+        display: block;
+    }    
+        
+    #photoContainer .slidesjs-previous {
+        padding: 10px;
+        margin-top: 0px;
+        margin-right: 50px;
+        float: left;
+    }
+
+    #photoContainer .slidesjs-next {
+        padding: 10px;
+        margin-top: 0px;
+        margin-right: 5px;
+        float: right;
+    }

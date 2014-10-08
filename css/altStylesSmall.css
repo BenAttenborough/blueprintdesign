@@ -1,0 +1,89 @@
+html{
+    background-color: black;    
+}
+
+body { 
+    margin: 0; 
+    margin-left:auto; 
+    margin-right: auto;
+    width: 1000px;
+}
+
+h4{
+    font-family: droid-sans, sans-serif;
+    font-size: 10pt;
+    margin-top: 0px;
+    line-height: 15pt;
+}
+
+p{
+    font-family: droid-sans, sans-serif;
+    font-size: 10pt;
+    line-height: 15pt;
+}
+
+.slice{
+    float:left;
+/*    height: 12.5%;*/
+    opacity: 0.5;
+}
+
+.sliceVert{
+    float:left;
+/*    width: 12.7%;*/
+    opacity: 0.5;
+}
+
+.sliceCentral{
+    float:left;
+/*    width: 69.0%;*/
+}
+
+.product {
+    width: 100%;
+    position: absolute;
+}
+
+#mainContainer {
+    position: relative;
+    background-color: #cce3c7;
+    width: 100%;
+    background-color: black;
+}    
+
+#productBox {
+    width: 40%;
+    height: 40%;
+    margin: 30%;
+    margin-top: 40%;
+    position: absolute;
+    border-style: dashed;
+    background-color: white;
+}
+
+#infoContainer{
+    width: 40%;
+    height: 20%;
+    margin: 30%;
+    margin-top: 16%;
+    position: absolute;
+    border-style: dashed;
+    
+}
+
+#productInfo {
+    width: 95%;
+    height: 89%;
+margin-left: 3%;
+    margin-top: 3%;
+    position: absolute;
+    overflow: auto;
+}
+
+#GPinfo {
+    
+}
+
+/*Set different styles depending on screen width*/
+@media screen and (max-width: 500px) {
+}

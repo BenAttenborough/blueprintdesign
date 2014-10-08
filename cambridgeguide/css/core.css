@@ -1,0 +1,57 @@
+.dieContainer {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -100px;
+  margin-left: -50px;
+}
+#container {
+  -webkit-perspective-origin: 50% -75%;
+  -webkit-perspective: 1000px;
+  position: absolute;
+  z-index: 100;
+}
+#cube {
+  height: 100px;
+  width: 100px;
+
+  -webkit-transition: -webkit-transform 1.6s linear;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.1, 1);
+}
+#cube>div {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: rgba(250,0,0,0.6);
+  background-size: 100%;
+  z-index: 100;
+  -webkit-box-shadow:
+    inset 0px 0px 0px 1px rgba(255, 0, 0, 0.7),
+    inset 0px 0px 40px 0px rgba(255, 100, 100, 0.6);
+}
+#cube div:nth-child(1) {
+  -webkit-transform : translateZ(50px);
+}
+
+#cube div:nth-child(2) {
+  -webkit-transform : rotateY(90deg) translateZ(50px);
+}
+
+#cube div:nth-child(3) {
+  -webkit-transform : rotateY(180deg) translateZ(50px);
+}
+
+#cube div:nth-child(4) {
+  -webkit-transform : rotateY(-90deg) translateZ(50px);
+}
+
+#cube div:nth-child(5) {
+  -webkit-transform : rotateX(-90deg) translateZ(50px) rotate(180deg);
+}
+
+#cube div:nth-child(6) {
+  -webkit-transform : rotateX(90deg) translateZ(50px);
+}

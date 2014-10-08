@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Simple markers</title>
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+        
+    #bodyContent
+        {
+            width: 300px;
+        }
+        
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+    <script>
+        
+var contentCentaur = '<div>'+
+'<h1>Centaur Cycles</h1>'+
+'<div>'+
+'<a href="Centaur.html"><img src="img/centaursmall.jpg" alt="Centaur Cycles" width="300" height="225" id="MillLane195"></a>'+
+'<p></p>'+
+'</div>'+
+'</div>'; 
+
+var contentRiverLane = '<div>'+
+'<h1>River Lane</h1>'+
+'<div>'+
+'<a href="RiverLane.html"><img src="img/RiverLanesmall.jpg" alt="River Lane" width="300" height="225" id="RiverLane"></a>'+
+'<p></p>'+
+'</div>'+
+'</div>';
+        
+var contentBookStore = '<div>'+
+'<h1>Book Store</h1>'+
+'<div>'+
+'<a href="RiverLane.html"><img src="img/Book-store-2.jpg" alt="Book Store" width="300" height="225" id="BookStore"></a>'+
+'<p></p>'+
+'</div>'+
+'</div>';
+        
+var contentCockburnSt = '<div>'+
+'<h1>Cockburn Street</h1>'+
+'<div>'+
+'<a href="CockburnSt.html"><img src="img/CockbrunStsmall.jpg" alt="Cockburn Street" width="300" height="225" id="CockburnSt"></a>'+
+'<p></p>'+
+'</div>'+
+'</div>';
+
+var contentErnest = '<div>'+
+'<h1>Ernest A Guest</h1>'+
+'<div>'+
+'<a href="Ernest.html"><img src="img/Ernestsmall.jpg" alt="Ernest A Guest" width="300" height="225" id="Earnest"></a>'+
+'<p></p>'+
+'</div>'+
+'</div>';
+
+        
+function initialize() {
+
+    //The following code removes point of view functions
+    var myStyles =[
+    {
+        featureType: "poi",
+        elementType: "labels",
+        stylers: [
+              { visibility: "off" }
+        ]
+    }
+];
+    
+    var myLatlng = new google.maps.LatLng(52.205722, 0.121705);    
+    var CentaurCycles = new google.maps.LatLng(52.207241, 0.125655);
+    var RiverLane = new google.maps.LatLng(52.210557, 0.142223);
+    var CockburnSt = new google.maps.LatLng(52.197493, 0.143900);
+    var Ernest = new google.maps.LatLng(52.204389, 0.138863);
+    var Bookstore = new google.maps.LatLng(52.206989, 0.120029);
+
+    var mapOptions = {
+        zoom: 14,
+        center: myLatlng,
+        styles: myStyles 
+    }
+    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    var markers = [];
+    
+    function signs(name,lat,lang,page,picture) {
+        this.name = name;
+        this.lat = lat;
+        this.lang = lang;
+        this.page = page;
+        this.picture = picture;
+    }
+
+    var sign = new Array();
+    sign[0] = new signs("Centaur Cycles", 52.207241, 0.125655, contentCentaur, "img/centaursmall.jpg");
+    sign[1] = new signs("Book Store", 52.206989, 0.120029,contentBookStore,"img/Book-store-2.jpg");
+    sign[2] = new signs("River Lane", 52.210557, 0.142223,contentRiverLane,"img/RiverLanesmall.jpg");
+    sign[3] = new signs("Cockburn Street", 52.197493, 0.143900,contentCockburnSt,"img/CockbrunSt.JPG");
+    sign[4] = new signs("Ernest A Guest", 52.204389, 0.138863,contentErnest,"img/RiverLanesmall.jpg");
+    
+    function placeMarker (position, title, page) {
+        console.log("Placing marker " + title);
+        var marker = new google.maps.Marker({
+            position: position,
+            map: map,
+            title: title,
+            alt: title,
+        });
+        
+                    google.maps.event.addListener(marker, 'click', function() {
+        infowindow = new google.maps.InfoWindow({
+        content: page});
+
+        infowindow.open(map,marker);
+                    })
+        
+        markers.push(marker);
+        console.log("market.title = " + marker.title);
+        console.log("markers[0].title = " + markers[0].title);
+        
+    };
+    
+    for(i=0; i<sign.length; i++) {
+        var pos = new google.maps.LatLng(sign[i].lat, sign[i].lang);
+        placeMarker(pos, sign[i].name, sign[i].page);
+    }  
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+  </head>
+  <body>
+    <div id="map-canvas"></div>      
+  </body>
+</html>
