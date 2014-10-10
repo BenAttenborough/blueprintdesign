@@ -14,7 +14,8 @@ body {
     height: 100%;
     max-width: 100%;
     overflow: hidden;
-    background-color: #8bb4e0;
+/*    background-color: #8bb4e0;*/
+    background-color: #1f508b;
     padding: 0 2%;
 }
 
@@ -74,9 +75,10 @@ figcaption {
 /*    height:3.5em;*/
     text-align: center;
     margin-top: 0em;
-    margin-bottom: 0em;
+    margin-bottom: em;
     margin-left: 0em;
     margin-right: 0em;
+    padding-bottom: 0.2em;
     overflow: hidden;
 }
 
@@ -171,6 +173,11 @@ a:active {
     margin-bottom: 2%;
 }
 
+.flexibox3{
+    width: 100%;
+    margin-bottom: 2%;
+}
+
 .flexibox4{
     width: 100%;
     margin-bottom: 2%;
@@ -182,11 +189,12 @@ a:active {
 }
 
 .projectTitle{
-    height: 100%;
-    width: 100%; 
+    height: 150%;
+    width: 104%; 
     float: left;
     margin-bottom: 2%;
     background-color: #3d7ad4;
+    margin-left: -2%
 }
 
 .projectTitleText{
@@ -202,6 +210,27 @@ a:active {
     height:100%; 
     position: relative;
     overflow:auto;
+}
+
+/*Experiment*/
+.stickout{
+    width:5%; 
+    height:55px; 
+ 
+    margin-left:-111px; 
+    z-index: -2;
+        position:absolute;
+}
+
+.triangle-topright {
+	width: 0;
+	height: 0;
+	border-top: 100px solid #3d7ad4;
+	border-left: 100px solid transparent;
+    margin-left: -6%;
+    margin-top: 2.7%;
+    z-index: -1;
+    position: absolute;
 }
 
 /*Changes for displays above 480px*/
@@ -233,6 +262,16 @@ a:active {
 
 /*Changes for displays above 600px*/
 @media screen and (min-width: 600px){
+    
+    .flexibox2{
+    width: 49%;
+    margin-bottom: 2%;
+}    
+    
+    .flexibox3{
+    width: 32%;
+    margin-bottom: 2%;
+}
     
     .flexibox4{
         width: 50%;
