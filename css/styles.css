@@ -1,3 +1,9 @@
+/*
+Fonts used: "proxima-nova"
+Light = font-weight: 300;
+Light = font-weight: 600;
+*/
+
 html{
     background-color: #101010;    
 }
@@ -13,7 +19,7 @@ body {
 /*    box-shadow: 5px 0px 5px #888888;*/
     height: 100%;
     max-width: 100%;
-    overflow: hidden;
+/*    overflow: hidden;*/
 /*    background-color: #8bb4e0;*/
     background-color: #1f508b;
     padding: 0 2%;
@@ -96,7 +102,7 @@ figcaption {
 
 p{
     color: white;
-    font-family: "museo-sans", Verdana, Geneva, sans-serif;
+    font-family: "proxima-nova", Verdana, Geneva, sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 1em;
@@ -107,7 +113,7 @@ p{
 
 h1{
     color: white;
-    font-family: "museo-sans", Verdana, Geneva, sans-serif;
+    font-family: "proxima-nova", Verdana, Geneva, sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 1.5em;
@@ -118,7 +124,7 @@ h1{
 
 h2{
     color: white;
-    font-family: "museo-sans", Verdana, Geneva, sans-serif;
+    font-family: "proxima-nova", Verdana, Geneva, sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 1.2em;
@@ -126,7 +132,7 @@ h2{
 
 h3{
     color: white;
-    font-family: "museo-sans", Verdana, Geneva, sans-serif;
+    font-family: "proxima-nova", Verdana, Geneva, sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 1em;
@@ -136,7 +142,7 @@ h3{
 
 h4{
     color: white;
-    font-family: "museo-sans", Verdana, Geneva, sans-serif;
+    font-family: "proxima-nova", Verdana, Geneva, sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 18pt;
@@ -145,7 +151,7 @@ h4{
 a:link {
     text-decoration: none;
     color: white;
-    font-family: "museo-sans", Verdana, Geneva, sans-serif;
+    font-family: "proxima-nova", Verdana, Geneva, sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 1em;
@@ -189,12 +195,13 @@ a:active {
 }
 
 .projectTitle{
-    height: 150%;
-    width: 104%; 
+    height: 100%;
+/*    width: 104%; */
+    width: 114%; 
     float: left;
     margin-bottom: 2%;
     background-color: #3d7ad4;
-    margin-left: -2%
+    margin-left: -7%
 }
 
 .projectTitleText{
@@ -213,24 +220,24 @@ a:active {
 }
 
 /*Experiment*/
-.stickout{
-    width:5%; 
-    height:55px; 
- 
-    margin-left:-111px; 
-    z-index: -2;
-        position:absolute;
-}
-
 .triangle-topright {
 	width: 0;
 	height: 0;
-	border-top: 100px solid #3d7ad4;
-	border-left: 100px solid transparent;
-    margin-left: -6%;
-    margin-top: 2.7%;
-    z-index: -1;
-    position: absolute;
+	border-top: 50px solid #123676;
+	border-left: 50px solid transparent;
+    position: relative;
+    top: 55px;
+    left: -69px;
+}
+
+#triangle-topleft {
+	width: 0;
+	height: 0;
+	border-top: 50px solid #123676;
+	border-left: 50px solid transparent;
+    position: relative;
+    top: 55px;
+    left: -69px;
 }
 
 /*Changes for displays above 480px*/
