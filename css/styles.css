@@ -23,6 +23,8 @@ body {
 /*    background-color: #8bb4e0;*/
     background-color: #1f508b;
     padding: 0 2%;
+    padding-top: 2%;
+    margin-top: -20px;
 }
 
 #menu {
@@ -196,12 +198,11 @@ a:active {
 
 .projectTitle{
     height: 100%;
-/*    width: 104%; */
-    width: 114%; 
+    width: 107%;
+    margin-left: 0%;
     float: left;
     margin-bottom: 2%;
     background-color: #3d7ad4;
-    margin-left: -7%
 }
 
 .projectTitleText{
@@ -226,18 +227,43 @@ a:active {
 	border-top: 50px solid #123676;
 	border-left: 50px solid transparent;
     position: relative;
-    top: 55px;
+    float: left;
+    top: -19px;
     left: -69px;
+    margin-right: -50px;
+    display: none;
 }
 
-#triangle-topleft {
+.triangle-topleft {
 	width: 0;
 	height: 0;
 	border-top: 50px solid #123676;
-	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
     position: relative;
-    top: 55px;
-    left: -69px;
+    top: -19px;
+    left: 69px;
+    float: right;
+    margin-left: -50px;
+    display: none;
+}
+
+.button {
+    height: 100%;
+    margin-left: 5%; 
+    margin-bottom: 2%;
+    float:left;
+    width: 90%;
+    border: 2px solid;
+    border-color: #3d7ad4;
+    border-radius:15px;
+    background-color: #3d7ad4;
+    padding-top: 6px;
+    padding-bottom: 0px;
+}
+
+.buttonText {
+
+    text-align: center;
 }
 
 /*Changes for displays above 480px*/
@@ -303,6 +329,25 @@ a:active {
         margin-right: 2%;
     }
 
+}
+
+@media screen and (min-width:1000px){
+    .triangle-topright {
+        display: block;
+    }
+    .triangle-topleft {
+        display: block;
+    }
+    
+    .projectTitle{
+    height: 100%;
+/*    width: 104%; */
+    width: 114.3%; 
+    float: left;
+    margin-bottom: 2%;
+    background-color: #3d7ad4;
+    margin-left: -7%
+    }
 }
 
 @media screen and (min-width: 1024px){
